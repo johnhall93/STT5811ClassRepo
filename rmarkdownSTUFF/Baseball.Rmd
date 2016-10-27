@@ -9,7 +9,9 @@ output:
 knitr::opts_chunk$set(echo = TRUE, comment = NA, message = FALSE, warning = FALSE, fig.align = "center")
 ```
 
-Create the data set discussed on page 248 of Open Intro.
+Create the data set discussed on page 248 of [*OpenIntro Statistics*](https://drive.google.com/file/d/0B-DHaDEbiOGkc1RycUtIcUtIelE/view).
+
+* Note the book is now linked.
 
 ```{r, label = "BBsetup"}
 library(dplyr)
@@ -29,7 +31,7 @@ table(bat10$pos)
 # detach("package:plyr", unload = TRUE)
 ```
 
-Create summary statistics presented in Table 5.24 of Open Intro.
+Create the summary statistics presented in Table 5.24 of [*OpenIntro Statistics*](https://drive.google.com/file/d/0B-DHaDEbiOGkc1RycUtIcUtIelE/view).
 
 ```{r}
 T524 <- bat10 %>%
@@ -115,7 +117,7 @@ p + stat_function(fun = df_limit, geom = "area", fill = "purple", alpha = 0.4, n
 
 **Finished - Now consider a different problem.**
 
-Use `bat10` to test whether the on base percentate is related to position.
+Use `bat10` to test whether the on base percentage is related to position.
 
 
 ```{r}
@@ -133,7 +135,7 @@ $H_O:$
 
 $H_A:$
 
-2. List the conditions nescessary for performing ANOVA:
+2. List the conditions necessary for performing ANOVA:
   +
   +
   +
@@ -170,7 +172,7 @@ summary(mod2.aov)
 $$CI_{1 - \alpha_e}(\mu_i - \mu_j) = (\bar{Y}_{i\bullet} - \bar{Y}_{j\bullet}) \pm t_{1 - \tfrac{\alpha_c}{2K};df_{Error}}\sqrt{MS_{Error}}\sqrt{\frac{1}{n_i} + \frac{1}{n_j}}$$
 ```{r}
 T5N
-(0.3354 - 0.3348) +c(-1, 1)*qt(1 - 0.05/(2*choose(7,2)), 320)*sqrt(0.001182)*sqrt(1/33 + 1/39)
+(0.3554 - 0.3348) +c(-1, 1)*qt(1 - 0.05/(2*choose(7,2)), 320)*sqrt(0.001182)*sqrt(1/33 + 1/39)
 ```
 
 **Your Turn:**
