@@ -48,7 +48,7 @@ DT::datatable(T524)
 
 1.  Write the null and alternative hypotheses to test whether the on base percentage is related to position.
 
-$H_0:$
+$H_0:$ 
 
 $H_A:$
 
@@ -88,8 +88,11 @@ summary(mod.aov)
 **Your turn:**  Compute the $p-$value using `pf`.  Does your answer agree with the output from the ANOVA table?
 
 ```{r}
-# Your code here
+1 - pf(1.994,3,323) ## yes, it agress.  
+
 ```
+
+
 
 ```{r}
 library(ggplot2)
@@ -175,7 +178,7 @@ T5N
 Find a 95% Bonferroni CI for the $\mu_{3B} - \mu_{1B}$
 
 ```{r}
-# Your code here
+(0.3554 - 0.3224) +c(-1, 1)*qt(1 - 0.05/(2*choose(7,2)), 320)*sqrt(0.001182)*sqrt(1/33 + 1/40)
 ```
 
 Another approach is to use `pairwise.t.test()`
